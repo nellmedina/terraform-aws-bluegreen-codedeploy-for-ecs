@@ -1,18 +1,3 @@
-output "public_subnet_cidrs" {
-  value       = module.subnets.public_subnet_cidrs
-  description = "Public subnet CIDRs"
-}
-
-output "private_subnet_cidrs" {
-  value       = module.subnets.private_subnet_cidrs
-  description = "Private subnet CIDRs"
-}
-
-output "vpc_cidr" {
-  value       = module.vpc.vpc_cidr_block
-  description = "VPC ID"
-}
-
 output "container_definition_json" {
   value       = module.container_definition.json
   description = "JSON encoded list of container definitions for use with other terraform resources such as aws_ecs_task_definition"
