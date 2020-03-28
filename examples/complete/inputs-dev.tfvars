@@ -104,3 +104,4 @@ s3_bucket_force_destroy = true
 auto_rollback_enabled = true
 auto_rollback_events  = ["DEPLOYMENT_FAILURE"]
 iam_path              = "/service-role/"
+

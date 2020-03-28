@@ -329,7 +329,7 @@ module "github_webhooks" {
 
 # https://www.terraform.io/docs/providers/aws/r/iam_role.html
 resource "aws_iam_role" "codedeploy" {
-  name               = "${local.iam_name}"
+  name               = local.iam_name
   assume_role_policy = "${data.aws_iam_policy_document.assume_role_policy.json}"
   path               = "${var.iam_path}"
   description        = "${var.description}"
@@ -349,7 +349,7 @@ data "aws_iam_policy_document" "assume_role_policy" {
 
 # https://www.terraform.io/docs/providers/aws/r/iam_policy.html
 resource "aws_iam_policy" "codedeploy" {
-  name        = "${local.iam_name}"
+  name        = local.iam_name
   policy      = "${data.aws_iam_policy_document.policy.json}"
   path        = "${var.iam_path}"
   description = "${var.description}"
