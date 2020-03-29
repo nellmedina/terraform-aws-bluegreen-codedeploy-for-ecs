@@ -77,7 +77,7 @@ data "aws_iam_policy_document" "default" {
       "cloudformation:*",
       "rds:*",
       "sqs:*",
-      "ecs:*",
+      "codedeploy:*",
       "iam:PassRole"
     ]
 
